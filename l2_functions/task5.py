@@ -5,7 +5,13 @@
 # HINT:
 # Use *
 
+def count_params(*args) -> int:
+    return len(args)
+
 # Do not change the below's code
 if __name__ == "__main__":
     assert count_params(1, 2, 3, 4) == 4
     assert count_params(3, "asd", (3, 4, 5)) == 3
+
+user_input = input("Enter values separated by spaces: ").split()
+print("Number of parameters entered: ", count_params(user_input))
